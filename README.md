@@ -12,6 +12,7 @@ Designed with easy integration for slash commands in mind.
 
 - [x] Bot setup with test commands
 - [x] Slash command registry integration
+- [ ] Bot sends message to show it's ready on startup
 - [ ] Humble Bundle webscraping commands
 - [ ] Humble Bundle webhook for automatic updates
 - [ ] Custom emote leaderboard (To show which emotes are most used in a server)
