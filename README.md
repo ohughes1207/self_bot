@@ -12,6 +12,7 @@ Designed with easy integration for slash commands in mind.
 
 - [x] Bot setup with test commands
 - [x] Slash command registry integration
+- [ ] Log integration
 - [ ] Bot sends messag on startup to show it's ready
 - [ ] Humble Bundle webscraping commands
 - [ ] Humble Bundle webhook for automatic updates
