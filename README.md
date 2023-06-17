@@ -1,7 +1,7 @@
 # Self_bot
 
 Discord self-bot written in C# using DSharpPlus. 
-Designed with easy integration for slash commands in mind.
+Designed for easy integration of slash commands.
 
 
 
@@ -12,7 +12,8 @@ Designed with easy integration for slash commands in mind.
 
 - [x] Bot setup with test commands
 - [x] Slash command registry integration
-- [ ] Bot sends messag on startup to show it's ready
+- [ ] Log integration
+- [ ] Bot sends message on startup to show it's ready
 - [ ] Humble Bundle webscraping commands
 - [ ] Humble Bundle webhook for automatic updates
 - [ ] Custom emote leaderboard (To show which emotes are most used in a server)
