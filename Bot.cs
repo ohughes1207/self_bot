@@ -1,11 +1,8 @@
 using System.Text.Json;
-using System.IO;
 using DSharpPlus;
 using DSharpPlus.EventArgs;
 using DSharpPlus.SlashCommands;
 using JsonConfig;
-using System.Reflection;
-using self_bot;
 
 namespace self_bot
 {
