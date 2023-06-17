@@ -1,7 +1,7 @@
 # Self_bot
 
 Discord self-bot written in C# using DSharpPlus. 
-Designed with easy integration for slash commands in mind.
+Designed for easy integration of slash commands.
 
 
 
