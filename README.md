@@ -16,4 +16,4 @@ Designed with easy integration for slash commands in mind.
 - [ ] Humble Bundle webhook for automatic updates
 - [ ] Custom emote leaderboard (To show which emotes are most used in a server)
 - [ ] FGC (Fighting Game Community) glossary command integration to search for definitions
-- [ ] Clickable button to show video associated with a searched termin in the FGC glossary
+- [ ] Clickable button to show video associated with a searched term in the FGC glossary
