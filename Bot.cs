@@ -11,9 +11,7 @@ namespace self_bot
 {
     public class Bot
     {
-        //public DiscordClient Client { get; private set; }
         public DiscordClient Client { get; private set; }
-        //public SlashCommandsExtension Slash { get; private set; }
         public SlashCommandsExtension Slash { get; private set; }
         
         public async Task RunAsync()
@@ -22,8 +20,10 @@ namespace self_bot
 
             var configJson = JsonSerializer.Deserialize<ConfigJson>(jsonString);
 
-
             /*
+
+            //If you prefer Newtonsoft.json you can use this code
+
             var json = string.Empty;
             using(var fs = File.OpenRead("config.json"))
             using(var sr = new StreamReader(fs, new UTF8Encoding(false)))
@@ -31,9 +31,6 @@ namespace self_bot
 
             var ConfigJson = JsonConvert.DeserializeObject<ConfigJson>(json);
             */
-
-
-
 
             var config = new DiscordConfiguration
             {
