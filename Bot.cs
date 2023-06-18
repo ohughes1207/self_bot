@@ -13,28 +13,9 @@ namespace self_bot
         
         public async Task RunAsync()
         {
-            var jsonString = await File.ReadAllTextAsync("config.json");
-
-            var configJson = JsonSerializer.Deserialize<ConfigJson>(jsonString);
-
-            /*
-
-            //If you prefer Newtonsoft.json you can use this code
-
-            var json = string.Empty;
-            using(var fs = File.OpenRead("config.json"))
-            using(var sr = new StreamReader(fs, new UTF8Encoding(false)))
-                json = await sr.ReadToEndAsync().ConfigureAwait(false);
-
-            var ConfigJson = JsonConvert.DeserializeObject<ConfigJson>(json);
-            */
-
-            var config = new DiscordConfiguration
+            try
             {
-                Token = configJson.Token,
-                TokenType = TokenType.Bot,
-                AutoReconnect = true
-            };
+            var config = InitializeConfig();
             
             Client = new DiscordClient(config);
 
@@ -52,12 +33,32 @@ namespace self_bot
             await Client.ConnectAsync();
             await Task.Delay(-1);
 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error running bot..\n------- EXCEPTION -------\n {ex.Message}\n------- EXCEPTION -------");
+            }
         }
 
         private Task OnClientReady(DiscordClient sender, ReadyEventArgs e)
         {
             return Task.CompletedTask;
         }
+        
+        private static DiscordConfiguration InitializeConfig()
+        {
+            var jsonString = File.ReadAllText("config.json");
 
+            var configJson = JsonSerializer.Deserialize<ConfigJson>(jsonString);
+
+            var config = new DiscordConfiguration
+            {
+                Token = configJson.Token,
+                TokenType = TokenType.Bot,
+                AutoReconnect = true
+            };
+
+            return config;
+        }
     }
 }
